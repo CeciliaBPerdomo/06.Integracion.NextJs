@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore" // Luego de crear la bd en firestore
+import { getStorage } from "firebase/storage"
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -17,9 +18,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app) // Luego de crear la bd en firestore
+export const db = getFirestore(app) // Luego de crear la bd en firestore
+export const storage = getStorage(app)
 
-export { db };
+// export { db };
 /* 
 Pasos para crear la base de datos: 
 Reglas -- cambiar a un a;o
